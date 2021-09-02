@@ -19,6 +19,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "git": "^0.1.5",
+    "init": "^0.1.2",
     "marked": "^3.0.2",
     "sirv-cli": "^1.0.0"
   }
