@@ -1,5 +1,8 @@
 <script>
   export let app;
+
+  import page from "page";
+
   import Await from "../components/Await.svelte";
   import Button from "../components/Button.svelte";
   import Card from "../components/Card.svelte";
@@ -22,6 +25,7 @@
   import Textarea from "../components/forms/Textarea.svelte";
 </script>
 
+<nav />
 <main>
   <Await />
   <Button />

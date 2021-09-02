@@ -1,7 +1,7 @@
 const GlobalProps = {
 	app: {
-		title: 'Svelte Tutorial App',
-		description: 'Learn more about svelte app development'
+		title: 'Varco',
+		description: 'Built with Svelte'
 	},
 	navMain : [
     { id: 1, name: "Home", to: "/" },
