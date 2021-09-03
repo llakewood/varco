@@ -1,12 +1,30 @@
-<section>Content</section>
+<script>
+</script>
+
+<section>
+  <h1>Digital transformation for IRL business.</h1>
+  <div class="c">Get your free consultation <button>Get started</button></div>
+</section>
 
 <style>
   section {
-    background-image: url("https://images.unsplash.com/photo-1629822097366-0ed4b086f080?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     height: 71vh;
     color: white;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 70px;
+  }
+  .c {
+    display: grid;
+    width: 360px;
+    background-color: white;
+    padding: 8px;
+    height: 240px;
+    color: crimson;
+    font-size: 20px;
   }
 </style>

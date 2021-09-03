@@ -1,12 +1,11 @@
 <script>
   import NavMain from "./NavMain.svelte";
-  export let title, description, navMain;
+  export let title, navMain;
 </script>
 
 <header>
   <div>
-    <h1>{@html title}</h1>
-    <h2>{@html description}</h2>
+    <h1><a href="/">{@html title}</a></h1>
   </div>
   <NavMain {navMain} />
 </header>
@@ -22,12 +21,6 @@
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
-    margin: 0;
-  }
-
-  h2 {
-    color: #ff3ecc;
-    font-size: 1em;
     margin: 0;
   }
 

@@ -1,13 +1,10 @@
 <script>
-  export let title, description;
+  export let title;
 </script>
 
 <footer>
   <div>
     <h2>{@html title}</h2>
-    <p>
-      {description}
-    </p>
   </div>
   <div>&copy; {@html title} 2021</div>
 </footer>
@@ -16,6 +13,7 @@
   footer {
     display: grid;
     grid-template-columns: 3fr 6fr;
+    background-color: darkslategrey;
   }
 
   h2 {
