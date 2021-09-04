@@ -36,32 +36,64 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   page.start();
 </script>
 
-<Header title={app.title} {navMain} />
-<main>
-  <svelte:component this={current} />
-</main>
-<Footer title={app.title} />
+<div>
+  <Header title={app.title} {navMain} />
+  <main>
+    <svelte:component this={current} />
+  </main>
+  <Footer title={app.title} />
+</div>
 
 <style>
+  :global(:root) {
+    --color-white: rgb(239, 241, 253);
+    --color-black: rgb(16, 16, 24);
+    --color-blue: blue;
+    --color-red: crimson;
+    --color-green: #279726;
+    --color-purple: rebeccapurple;
+    --color-orange: peru;
+    --color-yellow: yellow;
+    --main-bg-color: var(--color-white);
+    --main-text-color: var(--color-black);
+    --main-shadow-color: var(--color-black);
+    --main-light-accent: peachpuff;
+    --spacer: 8px;
+  }
+
   :global(html),
   :global(body) {
     height: 100%;
   }
   :global(body) {
+    color: var(--main-text-color);
+    color: var(--main-text-color);
     display: flex;
     flex-direction: column;
-    /* background-image: linear-gradient(crimson, peachpuff); */
-    background-image: url("https://images.unsplash.com/photo-1629822097366-0ed4b086f080?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 0;
   }
-  :global(main) {
+  :global(a),
+  :global(a:visited),
+  :global(a:active) {
+    color: var(--main-text-color);
+  }
+
+  :global(a:hover) {
+    border-bottom: 2px dotted var(--main-text-color);
+    text-decoration: none;
+    padding-bottom: var(--spacer);
+  }
+
+  :global(ul) {
+    margin: 0;
+    padding: 0;
+  }
+  main {
     flex: 1 0 auto;
   }
-  :global(footer) {
-    flex-shrink: 0;
+
+  div {
+    max-width: 95%;
+    margin: 0 auto;
   }
 </style>

@@ -13,20 +13,26 @@
 <style>
   header {
     display: grid;
-    grid-template-columns: 3fr 6fr;
+    grid-template-columns: 1fr;
+    grid-gap: var(--spacer);
+    padding: var(--spacer) 0;
   }
 
   h1 {
-    color: #333e00;
-    text-transform: uppercase;
-    font-size: 4em;
+    color: var(--main-text-color);
+    font-size: 2em;
     font-weight: 100;
     margin: 0;
   }
 
   @media (min-width: 640px) {
     header {
-      max-width: none;
+      grid-template-columns: 3fr 6fr;
+      padding: calc(var(--spacer) * 2) 0;
+    }
+    h1 {
+      font-size: 2.5em;
+      line-height: 0.9em;
     }
   }
 </style>

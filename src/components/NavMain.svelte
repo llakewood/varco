@@ -1,6 +1,5 @@
 <script>
   export let navMain;
-  console.log(navMain);
 </script>
 
 <ul>
@@ -17,17 +16,14 @@
   ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
-  li {
-    padding: 8px;
-  }
-  a {
-    color: white;
-  }
-  a:hover {
-    text-decoration: none;
-    border-bottom: 2px solid peachpuff;
-    padding-bottom: 8px;
+
+  @media (min-width: 640px) {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
   }
 </style>

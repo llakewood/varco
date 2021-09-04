@@ -1,12 +1,12 @@
 const GlobalProps = {
 	app: {
-		title: 'Varco',
+		title: 'The Variables Co.',
 		description: 'Built with Svelte'
 	},
 	navMain : [
-    { id: 1, name: "About", to: "/about" },
 		{ id: 3, name: "Thinking", to: "/thinking" },
-		{ id: 4, name: "Work", to: "/work" },
+		{ id: 1, name: "Services", to: "/Services" },
+		{ id: 4, name: "Proof", to: "/proof" },
 		{ id: 5, name: "Contact", to: "/contact" },
   ],
 	services : [
@@ -23,7 +23,7 @@ const GlobalProps = {
 		{ id: 3, name: "Experience", to: "/services/experience", description:""},
 		{ id: 31, name: "Employee experience", to: "/services/employee-experience", description:"", parent:3 },
 		{ id: 32, name: "User experience", to: "/services/user-experience", description:"", parent:3 },
-  ],
+  ]
 };
 
 export default GlobalProps;

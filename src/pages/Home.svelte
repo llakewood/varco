@@ -1,30 +1,33 @@
 <script>
+  import YourVariables from "../components/YourVariables.svelte";
+  import CTA from "../components/CTA.svelte";
 </script>
 
 <section>
-  <h1>Digital transformation for IRL business.</h1>
-  <div class="c">Get your free consultation <button>Get started</button></div>
+  <YourVariables />
+  <CTA />
 </section>
 
 <style>
   section {
-    height: 71vh;
-    color: white;
     display: grid;
-    grid-template-columns: 6fr 3fr;
+    grid-template-columns: 1fr;
+    grid-gap: calc(var(--spacer) * 4);
+    align-items: center;
   }
 
-  h1 {
-    margin: 0;
-    font-size: 70px;
+  @media (min-width: 640px) {
+    section {
+      display: grid;
+      grid-template-columns: 8fr 4fr;
+      grid-gap: calc(var(--spacer) * 10);
+      padding: calc(var(--spacer) * 5) 0;
+    }
   }
-  .c {
-    display: grid;
-    width: 360px;
-    background-color: white;
-    padding: 8px;
-    height: 240px;
-    color: crimson;
-    font-size: 20px;
+
+  @media (min-width: 1024px) {
+    section {
+      padding: calc(var(--spacer) * 10) 0;
+    }
   }
 </style>
