@@ -1,6 +1,10 @@
 <script>
   import YourVariables from "../components/YourVariables.svelte";
   import CTA from "../components/CTA.svelte";
+  import Thinking from "../components/Thinking.svelte";
+  import Services from "../components/Services.svelte";
+  import Proof from "../components/Proof.svelte";
+  import Qbert from "../components/Qbert.svelte";
 </script>
 
 <section>
@@ -8,26 +12,17 @@
   <CTA />
 </section>
 
+<Thinking />
+
+<Services />
+
+<Proof />
+
+<Qbert />
+
 <style>
   section {
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 8fr 4fr;
     grid-gap: calc(var(--spacer) * 4);
-    align-items: center;
-  }
-
-  @media (min-width: 640px) {
-    section {
-      display: grid;
-      grid-template-columns: 8fr 4fr;
-      grid-gap: calc(var(--spacer) * 10);
-      padding: calc(var(--spacer) * 5) 0;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    section {
-      padding: calc(var(--spacer) * 10) 0;
-    }
   }
 </style>

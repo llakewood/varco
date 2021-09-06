@@ -1,1 +1,5 @@
-<h1>Thinking / Thought Leadership Page</h1>
+<script>
+  import Thinking from "../components/Thinking.svelte";
+</script>
+
+<Thinking />

@@ -1,4 +1,6 @@
 <script>
+  import { onInterval } from "../utils.js";
+
   const variables = {
     pillars: ["people", "process", "experience", "tech"],
     traits: [
@@ -31,6 +33,10 @@
     trait = randoVar(variables.traits);
     grammar();
   };
+
+  let counter = 0;
+  onInterval(() => handleClick(), 5000);
+
   grammar();
 </script>
 
@@ -42,7 +48,7 @@
   </h1>
   <div>
     <a href="/services">We can help you put that in place.</a>
-    <button on:click={handleClick}>Refresh</button>
+    <button on:click={handleClick}>{counter}</button>
   </div>
 </div>
 
@@ -50,18 +56,21 @@
   h1 {
     font-size: 40px;
     margin: calc(var(--spacer) * 1);
+    letter-spacing: -2px;
+    line-height: 40px;
   }
   span:first-child {
-    color: var(--color-purple);
+    color: var(--color-blue);
   }
   span:last-child {
-    color: var(--color-green);
+    color: var(--color-orange);
   }
 
   @media (min-width: 640px) {
     h1 {
       font-size: 70px;
       margin: calc(var(--spacer) * 2) 0;
+      line-height: 70px;
     }
   }
 </style>

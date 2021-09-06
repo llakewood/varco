@@ -45,19 +45,21 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 </div>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500;900&display=swap");
+
   :global(:root) {
     --color-white: rgb(239, 241, 253);
-    --color-black: rgb(16, 16, 24);
-    --color-blue: blue;
-    --color-red: crimson;
-    --color-green: #279726;
-    --color-purple: rebeccapurple;
-    --color-orange: peru;
-    --color-yellow: yellow;
-    --main-bg-color: var(--color-white);
+    --color-black: rgb(25, 25, 20);
+    --color-blue: #174fa0;
+    --color-red: #cb3831;
+    --color-green: #297443;
+    --color-purple: #5b0d5a;
+    --color-orange: #ff6013;
+    --color-yellow: #faab11;
+    --main-light-accent: #f5e8de;
+    --main-bg-color: var(--main-light-accent);
     --main-text-color: var(--color-black);
     --main-shadow-color: var(--color-black);
-    --main-light-accent: peachpuff;
     --spacer: 8px;
   }
 
@@ -67,10 +69,11 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   }
   :global(body) {
     color: var(--main-text-color);
-    color: var(--main-text-color);
+    /* background-color: var(--main-bg-color); */
     display: flex;
     flex-direction: column;
     padding: 0;
+    font-family: "Noto Sans JP";
   }
   :global(a),
   :global(a:visited),
@@ -88,6 +91,28 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     margin: 0;
     padding: 0;
   }
+
+  :global(section) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: calc(var(--spacer));
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    :global(section) {
+      display: grid;
+      grid-gap: calc(var(--spacer) * 10);
+      padding: calc(var(--spacer) * 5) 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(section) {
+      padding: calc(var(--spacer) * 10) 0;
+    }
+  }
+
   main {
     flex: 1 0 auto;
   }
