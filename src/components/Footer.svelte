@@ -70,4 +70,19 @@
   li:first-child {
     font-weight: 700;
   }
+
+  a:after {
+    content: "";
+    width: 0%;
+    background-color: var(--color-yellow);
+    height: var(--spacer);
+    transition: width var(--speed) ease-in;
+  }
+  a:hover:after {
+    width: 100%;
+    display: block;
+    position: relative;
+    bottom: var(--spacer);
+    z-index: -1;
+  }
 </style>

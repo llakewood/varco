@@ -7,7 +7,7 @@
     <img src={thumbnail} alt={name} />
     <figcaption>{name}</figcaption>
   </figure>
-  {bumper} &raquo;
+  {bumper} &rarr;
 </a>
 
 <style>

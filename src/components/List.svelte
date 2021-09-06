@@ -40,6 +40,10 @@
     font-weight: 700;
   }
 
+  a:hover:after {
+    display: none;
+  }
+
   .service_list li ul li {
     list-style-type: "> ";
     font-weight: 300;

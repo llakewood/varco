@@ -65,6 +65,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     --main-text-color: var(--color-black);
     --main-shadow-color: var(--color-black);
     --spacer: 8px;
+    --speed: 250ms;
   }
 
   :global(html),
@@ -85,6 +86,22 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   :global(a:visited),
   :global(a:active) {
     color: var(--main-text-color);
+  }
+
+  :global(a:after) {
+    content: "";
+    width: 0%;
+    background-color: var(--color-yellow);
+    height: var(--spacer);
+    transition: width var(--speed) ease-in;
+  }
+
+  :global(a:hover:after) {
+    width: 100%;
+    display: block;
+    position: relative;
+    bottom: 13px;
+    z-index: -1;
   }
 
   :global(a:hover) {

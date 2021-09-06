@@ -19,6 +19,10 @@
     justify-content: space-between;
   }
 
+  li {
+    padding-bottom: var(--spacer);
+  }
+
   @media (min-width: 640px) {
     ul {
       display: flex;
