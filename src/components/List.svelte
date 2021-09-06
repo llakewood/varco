@@ -16,7 +16,7 @@
         <ul>
           {#each item.children as child, i (child.id)}
             <li>
-              <a href={child.to}>
+              <a class={item.name.toLowerCase()} href={child.to}>
                 {child.name}
               </a>
             </li>
@@ -43,5 +43,22 @@
   .service_list li ul li {
     list-style-type: "> ";
     font-weight: 300;
+  }
+
+  .service_list li ul li a:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+  }
+
+  .service_list li ul li a.process:hover {
+    background-color: var(--color-purple);
+  }
+
+  .service_list li ul li a.experience:hover {
+    background-color: var(--color-red);
+  }
+
+  .service_list li ul li a.technology:hover {
+    background-color: var(--color-green);
   }
 </style>

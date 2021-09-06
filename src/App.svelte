@@ -7,11 +7,11 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   // pages
   import Home from "./pages/Home.svelte";
-  import About from "./pages/About.svelte";
+  import Services from "./pages/Services.svelte";
   import Contact from "./pages/Contact.svelte";
   import Kit from "./pages/Kit.svelte";
   import Thinking from "./pages/Thinking.svelte";
-  import Work from "./pages/Work.svelte";
+  import Proof from "./pages/Proof.svelte";
   import NotFound from "./pages/NotFound.svelte";
 
   // components
@@ -20,17 +20,17 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   // set default component
   let current = Home;
-  export let app, services, navMain;
+  export let app, services, proof, navMain;
 
   // Map routes to page. If a route is hit the current
   // reference is set to the route's component
   // Advanced tutorial: https://codechips.me/svelte-routing-with-page-js-part-1/
   page("/", () => (current = Home));
-  page("/about", () => (current = About));
+  page("/services", () => (current = Services));
   page("/contact", () => (current = Contact));
   page("/kit", () => (current = Kit));
   page("/thinking", () => (current = Thinking));
-  page("/work", () => (current = Work));
+  page("/proof", () => (current = Proof));
   page("*", () => (current = NotFound));
   // activate router
   page.start();
@@ -39,7 +39,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 <div>
   <Header title={app.title} {navMain} />
   <main>
-    <svelte:component this={current} {app} {services} />
+    <svelte:component this={current} {app} {services} {proof} />
   </main>
   <Footer title={app.title} />
 </div>
@@ -70,7 +70,6 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   :global(body) {
     color: var(--main-text-color);
-    /* background-color: var(--main-bg-color); */
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -85,9 +84,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   }
 
   :global(a:hover) {
-    border-bottom: 2px dotted var(--main-text-color);
     text-decoration: none;
-    padding-bottom: var(--spacer);
   }
 
   :global(ul) {

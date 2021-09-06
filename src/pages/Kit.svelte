@@ -12,7 +12,7 @@
   // import Keypad from "../components/Keypad.svelte";
   import List from "../components/List.svelte";
   import Login from "../components/Login.svelte";
-  import PhotoAlbum from "../components/PhotoAlbum.svelte";
+  import Gallery from "../components/Gallery.svelte";
   import Video from "../components/Video.svelte";
 
   // Forms
@@ -33,7 +33,7 @@
   <List />
   <Login />
   <Video />
-  <PhotoAlbum />
+  <Gallery />
   <div>
     <Card {...app} />
     <Card {...app} />

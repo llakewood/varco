@@ -1,5 +1,5 @@
 <script>
-  export let services;
+  export let services, proof;
   import YourVariables from "../components/YourVariables.svelte";
   import CTA from "../components/CTA.svelte";
   import Thinking from "../components/Thinking.svelte";
@@ -46,7 +46,11 @@
       together to succeed in their mission and innovate for the future.
     </p>
   </div>
-  <Proof {services} />
+  <Proof {proof} />
+</section>
+
+<section>
+  <CTA />
 </section>
 
 <!-- Qbert /-->
@@ -61,6 +65,7 @@
 
   section {
     grid-gap: var(--spacer);
+    align-items: start;
   }
 
   @media (min-width: 1024px) {

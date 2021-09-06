@@ -1,28 +1,31 @@
 <script>
-  export let title, description;
+  export let name, thumbnail, to, bumper;
 </script>
 
-<div>
-  <h3>{@html title}</h3>
-  <p>
-    {description}
-  </p>
-</div>
+<a href={to}>
+  <figure>
+    <img src={thumbnail} alt={name} />
+    <figcaption>{name}</figcaption>
+  </figure>
+  {bumper} &raquo;
+</a>
 
 <style>
-  div {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-    background-color: honeydew;
-    border-radius: 4px;
-    box-shadow: 1px 1px 10px grey;
+  figure,
+  img {
+    width: 100%;
+    margin: 0;
+    margin: 0 0 8px 0;
+  }
+  figcaption {
+    color: var(--main-text-color);
+    font-weight: 700;
   }
 
-  h3 {
-    color: blue;
-    font-size: 1em;
+  a {
+    color: var(--color-red);
+    font-size: 1.5rem;
     font-weight: 300;
+    border: 0;
   }
 </style>

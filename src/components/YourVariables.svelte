@@ -59,7 +59,7 @@
     <p>
       Better your business by aligning people, process, technology and
       experience.
-      <a href="/thinking">Show me how -></a>
+      <a href="/thinking">See how</a>
     </p>
   </div>
 </div>
@@ -74,8 +74,21 @@
 
   a {
     display: block;
-    margin-top: var(--spacer);
-    /* border-bottom: 1px var(--main-bg-color); */
+    margin-top: calc(var(--spacer) * 2);
+    color: var(--color-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 0;
+  }
+  a:after {
+    content: ">>";
+    width: calc(var(--spacer) * 2);
+    height: calc(var(--spacer) * 2);
+    padding-left: var(--spacer);
+  }
+
+  a:hover:after {
+    padding-left: calc(var(--spacer) * 2);
   }
 
   span:last-child {
