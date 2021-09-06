@@ -60,7 +60,10 @@
   }
 
   h2 {
-    margin-top: calc(var(--spacer) * 5);
+    margin: calc(var(--spacer) * 5) 0 0 0;
+  }
+  p {
+    margin: 0 0 calc(var(--spacer) * 5) 0;
   }
 
   section {

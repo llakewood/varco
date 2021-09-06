@@ -17,6 +17,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   // components
   import Header from "./components/Header.svelte";
   import Footer from "./components/Footer.svelte";
+  import SkipToContent from "./components/SkipToContent.svelte";
 
   // set default component
   let current = Home;
@@ -37,9 +38,12 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 </script>
 
 <div>
+  <SkipToContent />
   <Header title={app.title} {navMain} />
   <main>
-    <svelte:component this={current} {app} {services} {proof} />
+    <a name="main">
+      <svelte:component this={current} {app} {services} {proof} />
+    </a>
   </main>
   <Footer title={app.title} />
 </div>
@@ -131,6 +135,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   main {
     flex: 1 0 auto;
+    position: relative;
   }
 
   div {

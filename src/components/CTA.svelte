@@ -42,7 +42,6 @@
     border-radius: 0px;
   }
 
-  p,
   h2,
   button {
     margin: 0;
