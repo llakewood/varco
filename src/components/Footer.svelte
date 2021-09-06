@@ -13,15 +13,11 @@
   <div />
   <div>
     <ul>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
-      <li><a href="/#">Sample</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/thinking">Thinking</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/proof">Proof</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </footer>
@@ -65,7 +61,8 @@
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: end;
     list-style-type: "> ";
     list-style-position: inside;
   }

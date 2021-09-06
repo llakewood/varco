@@ -2,27 +2,35 @@
   import { onInterval } from "../utils.js";
 
   const variables = {
-    pillars: ["people", "process", "experience", "tech"],
+    pillars: ["people", "process", "experience", "technology"],
     traits: [
-      "digitial transformation",
-      "mentorship",
-      "leadership",
-      "creative solutions",
+      "accessibility",
       "automation",
+      "creativity",
+      "digitial transformation",
+      "design",
+      "leadership",
+      "mentorship",
+      "new ways of working",
       "security",
       "strategy",
-      "modern tools",
       "the ability to innovate",
     ],
   };
 
+  let needs, current;
+
   const randoVar = (v) => {
-    return v[Math.floor(Math.random() * v.length)];
+    let updated = v[Math.floor(Math.random() * v.length)];
+    if (current === updated) {
+      randoVar(v);
+    } else {
+      return updated;
+    }
   };
 
   let pillar = randoVar(variables.pillars);
   let trait = randoVar(variables.traits);
-  let needs;
 
   const grammar = () => {
     needs = pillar == "people" ? "need" : "needs";
@@ -42,13 +50,12 @@
 
 <div role="region" aria-live="polite">
   <h1>
-    Your <span>{pillar}</span>
+    Your <span class={pillar}>{pillar}</span>
     {needs}
     <span>{trait}</span>.
   </h1>
   <div>
     <a href="/services">We can help you put that in place.</a>
-    <button on:click={handleClick}>{counter}</button>
   </div>
 </div>
 
@@ -59,9 +66,7 @@
     letter-spacing: -2px;
     line-height: 40px;
   }
-  span:first-child {
-    color: var(--color-blue);
-  }
+
   span:last-child {
     color: var(--color-orange);
   }

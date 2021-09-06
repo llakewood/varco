@@ -20,7 +20,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   // set default component
   let current = Home;
-  export let app, navMain;
+  export let app, services, navMain;
 
   // Map routes to page. If a route is hit the current
   // reference is set to the route's component
@@ -39,7 +39,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 <div>
   <Header title={app.title} {navMain} />
   <main>
-    <svelte:component this={current} />
+    <svelte:component this={current} {app} {services} />
   </main>
   <Footer title={app.title} />
 </div>
@@ -66,6 +66,10 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   :global(html),
   :global(body) {
     height: 100%;
+  }
+
+  :global(*) {
+    /* transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1); */
   }
   :global(body) {
     color: var(--main-text-color);
@@ -97,6 +101,19 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     grid-template-columns: 1fr;
     grid-gap: calc(var(--spacer));
     align-items: center;
+  }
+
+  :global(.people) {
+    color: var(--color-blue);
+  }
+  :global(.process) {
+    color: var(--color-purple);
+  }
+  :global(.technology) {
+    color: var(--color-green);
+  }
+  :global(.experience) {
+    color: var(--color-red);
   }
 
   @media (min-width: 640px) {
