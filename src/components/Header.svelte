@@ -20,7 +20,7 @@
 
   h1 {
     color: var(--main-text-color);
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 100;
     margin: 0;
   }
@@ -31,7 +31,7 @@
       padding: calc(var(--spacer) * 2) 0;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2.5rem;
       line-height: 0.9em;
     }
   }

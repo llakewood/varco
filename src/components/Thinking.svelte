@@ -1,8 +1,12 @@
 <script>
   import Infinity from "../components/Infinity.svelte";
+
+  // export let services;
+  // import List from "./List.svelte";
 </script>
 
 <div>
+  <!-- <List items={services} nested={false} classes="thinking_list" /> -->
   <ul>
     <li>People</li>
     <li>Process</li>
@@ -27,7 +31,8 @@
     left: calc(50% - 143px);
   }
 
-  ul {
+  ul,
+  p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
@@ -35,6 +40,10 @@
     color: var(--color-white);
     font-size: 2rem;
     grid-column: 2 / -2;
+  }
+
+  p {
+    color: var(--main-text-color);
   }
 
   ul li {

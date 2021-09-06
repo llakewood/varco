@@ -23,7 +23,7 @@
     ul {
       display: flex;
       justify-content: space-evenly;
-      align-items: flex-end;
+      align-items: flex-start;
     }
   }
 </style>

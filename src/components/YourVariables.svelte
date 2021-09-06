@@ -11,10 +11,11 @@
       "design",
       "leadership",
       "mentorship",
+      "monitoring",
       "new ways of working",
       "security",
       "strategy",
-      "the ability to innovate",
+      "to innovate",
     ],
   };
 
@@ -55,7 +56,11 @@
     <span>{trait}</span>.
   </h1>
   <div>
-    <a href="/services">We can help you put that in place.</a>
+    <p>
+      Better your business by aligning people, process, technology and
+      experience.
+      <a href="/thinking">Show me how -></a>
+    </p>
   </div>
 </div>
 
@@ -65,6 +70,12 @@
     margin: calc(var(--spacer) * 1);
     letter-spacing: -2px;
     line-height: 40px;
+  }
+
+  a {
+    display: block;
+    margin-top: var(--spacer);
+    /* border-bottom: 1px var(--main-bg-color); */
   }
 
   span:last-child {

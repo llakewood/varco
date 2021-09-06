@@ -56,7 +56,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     --color-purple: #5b0d5a;
     --color-orange: #ff6013;
     --color-yellow: #faab11;
-    --main-light-accent: #f5e8de;
+    --main-light-accent: var(--color-yellow);
     --main-bg-color: var(--main-light-accent);
     --main-text-color: var(--color-black);
     --main-shadow-color: var(--color-black);
@@ -68,9 +68,6 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     height: 100%;
   }
 
-  :global(*) {
-    /* transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1); */
-  }
   :global(body) {
     color: var(--main-text-color);
     /* background-color: var(--main-bg-color); */
@@ -78,7 +75,9 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     flex-direction: column;
     padding: 0;
     font-family: "Noto Sans JP";
+    font-size: 1rem;
   }
+
   :global(a),
   :global(a:visited),
   :global(a:active) {
@@ -117,6 +116,9 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   }
 
   @media (min-width: 640px) {
+    :global(body) {
+      font-size: 2rem;
+    }
     :global(section) {
       display: grid;
       grid-gap: calc(var(--spacer) * 10);

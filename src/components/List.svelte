@@ -2,7 +2,7 @@
   https://svelte.dev/tutorial/each-block-bindings
  -->
 <script>
-  export let items, classes;
+  export let items, classes, nested;
 </script>
 
 <ul class={classes}>
@@ -12,7 +12,7 @@
         {item.name}
       </a>
 
-      {#if item.children}
+      {#if item.children && nested}
         <ul>
           {#each item.children as child, i (child.id)}
             <li>
@@ -34,7 +34,6 @@
     grid-gap: 20px;
     list-style-position: inside;
     grid-column: 2 / -2;
-    font-size: 2rem;
   }
   .service_list li {
     list-style-type: none;

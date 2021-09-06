@@ -9,10 +9,6 @@
 
 <div>
   <h2>Free consultation</h2>
-  <p>
-    Better your business by aligning people, process, technology and experience.
-    Learn how today!
-  </p>
   <form on:submit={handleSubmit} action="#?success">
     <label
       >Name
@@ -41,10 +37,9 @@
 <style>
   div {
     display: grid;
-    border: 1px solid var(--color-purple);
-    padding: calc(var(--spacer) * 3);
+    border-top: 1px solid var(--main-light-accent);
     grid-gap: calc(var(--spacer) * 3);
-    border-radius: var(--spacer);
+    border-radius: 0px;
   }
 
   p,
@@ -55,5 +50,13 @@
 
   span {
     display: block;
+  }
+
+  @media (min-width: 1024px) {
+    div {
+      padding: calc(var(--spacer) * 3);
+      border: 1px solid var(--color-accent);
+      border-radius: var(--spacer);
+    }
   }
 </style>

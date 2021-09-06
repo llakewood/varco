@@ -1,11 +1,10 @@
 <script>
   export let services;
   import List from "./List.svelte";
-  let style = true;
 </script>
 
 <div>
-  <List items={services} classes="service_list" />
+  <List items={services} nested={true} classes="service_list" />
 </div>
 
 <style>
