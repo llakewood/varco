@@ -60,7 +60,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     --color-purple: #5b0d5a;
     --color-orange: #ff6013;
     --color-yellow: #faab11;
-    --main-light-accent: var(--color-yellow);
+    --main-light-accent: #fde0a7;
     --main-bg-color: var(--main-light-accent);
     --main-text-color: var(--color-black);
     --main-shadow-color: var(--color-black);
@@ -91,7 +91,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   :global(a:after) {
     content: "";
     width: 0%;
-    background-color: var(--color-yellow);
+    background-color: var(--main-light-accent);
     height: var(--spacer);
     transition: width var(--speed) ease-in;
   }
