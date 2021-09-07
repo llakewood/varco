@@ -30,7 +30,6 @@
   div {
     position: relative;
     display: grid;
-    /* grid-template-columns: repeat(12, 1fr); */
   }
 
   div div {

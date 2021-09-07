@@ -1,6 +1,7 @@
 <script>
   let name,
-    email = undefined;
+    email,
+    phone = undefined;
 
   const handleSubmit = () => {
     console.log({ name });
@@ -9,15 +10,19 @@
 
 <div>
   <h2>Free consultation</h2>
-  <form on:submit={handleSubmit} action="#?success">
+  <form
+    on:submit={handleSubmit}
+    action="https://formspree.io/f/xgerrrgw?success"
+    method="POST"
+  >
     <label
       >Name
-      <input bind:value={name} required />
+      <input bind:value={name} required name="name" />
     </label>
 
     <label
       >Email
-      <input bind:value={email} required />
+      <input bind:value={email} required email="email" />
     </label>
 
     <span>

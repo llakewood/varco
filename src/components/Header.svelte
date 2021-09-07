@@ -16,6 +16,7 @@
     grid-template-columns: 1fr;
     grid-gap: var(--spacer);
     padding: var(--spacer) 0;
+    height: calc(var(--spacer) * 5);
   }
 
   h1 {

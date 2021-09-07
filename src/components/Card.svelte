@@ -7,7 +7,7 @@
     <img src={metadata.image.url} alt={title} />
     <figcaption>{title}</figcaption>
   </figure>
-  {metadata.bumper} &rarr;
+  <p>{metadata.bumper} &rarr;</p>
 </a>
 
 <style>
@@ -27,5 +27,14 @@
     font-size: 1.5rem;
     font-weight: 300;
     border: 0;
+    padding: 8px;
+  }
+
+  a:hover {
+    background-color: var(--color-white);
+    box-shadow: 1px 1px 10px var(--color-yellow);
+  }
+  a:hover:after {
+    height: 0;
   }
 </style>

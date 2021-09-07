@@ -41,7 +41,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   <SkipToContent />
   <Header title={app.title} {navMain} />
   <main>
-    <a name="main">
+    <a name="main" class="skipToTarget">
       <svelte:component this={current} {app} {services} {proof} />
     </a>
   </main>
@@ -146,7 +146,7 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
 
   @media (min-width: 1024px) {
     :global(section) {
-      padding: calc(var(--spacer) * 10) 0;
+      padding: calc(var(--spacer) * 8) 0;
     }
   }
 
@@ -158,5 +158,9 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   div {
     max-width: 95%;
     margin: 0 auto;
+  }
+
+  .skipToTarget:hover:after {
+    height: 0;
   }
 </style>
