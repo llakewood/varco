@@ -1,5 +1,4 @@
 <script>
-  export let services, proof;
   import YourVariables from "../components/YourVariables.svelte";
   import CTA from "../components/CTA.svelte";
   import Thinking from "../components/Thinking.svelte";
@@ -13,40 +12,39 @@
   <CTA />
 </section>
 
-<section>
+<section class="fill">
   <h2>Thinking</h2>
+  <p>
+    Using proven approaches, a set of standardized tools and our advisors’ deep
+    experience, we can provide you with vision and implementation options that
+    can help you continuously improve your products, services and processes.
+  </p>
   <div>
-    <p>
-      Using proven approaches, a set of standardized tools and our advisors’
-      deep experience, we can provide you with vision and implementation options
-      that can help you continuously improve your products, services and
-      processes.
-    </p>
+    <Thinking />
   </div>
-  <Thinking {services} />
 </section>
 
 <section>
   <h2>Services</h2>
+  <p>
+    Our human-centered approach helps organizations modernize planning, research
+    & development, delivery, monitoring and management of traditional and
+    digital workflows.
+  </p>
   <div>
-    <p>
-      Our human-centered approach helps organizations modernize planning,
-      research & development, delivery, monitoring and management of traditional
-      and digital workflows.
-    </p>
+    <Services />
   </div>
-  <Services {services} />
 </section>
 
-<section>
+<section class="fill">
   <h2>Proof</h2>
+  <p>
+    Learn about how these concepts are helping real organizations work better
+    together to succeed in their mission and innovate for the future.
+  </p>
   <div>
-    <p>
-      Learn about how these concepts are helping real organizations work better
-      together to succeed in their mission and innovate for the future.
-    </p>
+    <Proof />
   </div>
-  <Proof {proof} />
 </section>
 
 <section>
@@ -69,6 +67,15 @@
   section {
     grid-gap: var(--spacer);
     align-items: start;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  section * {
+    grid-column: 2 / -2;
+  }
+
+  .fill {
+    background-color: var(--main-light-accent);
   }
 
   @media (min-width: 1024px) {

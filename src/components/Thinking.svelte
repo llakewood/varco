@@ -1,17 +1,25 @@
 <script>
   import Infinity from "../components/Infinity.svelte";
+  import { onMount } from "svelte";
 
-  // export let services;
-  // import List from "./List.svelte";
+  let pillars = [];
+
+  onMount(async () => {
+    const res = await fetch(
+      `https://api.cosmicjs.com/v2/buckets/varco-production/objects?pretty=true&query=%7B%22type%22%3A%22pillars%22%7D&read_key=JVPdCe3IM5oJV9537KRNr3fCl3xy36ucJQa79WhVg09ApR2YuL&limit=20&props=slug,title,content`
+    );
+    pillars = await res.json();
+    pillars = pillars.objects;
+  });
 </script>
 
 <div>
-  <!-- <List items={services} nested={false} classes="thinking_list" /> -->
   <ul>
-    <li>People</li>
-    <li>Process</li>
-    <li>Experience</li>
-    <li>Technology</li>
+    {#each pillars as item, i}
+      <li>
+        {item.title}
+      </li>
+    {/each}
   </ul>
   <div>
     <Infinity />
@@ -22,7 +30,7 @@
   div {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(12, 1fr); */
   }
 
   div div {
@@ -31,19 +39,13 @@
     left: calc(50% - 143px);
   }
 
-  ul,
-  p {
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
     text-align: center;
     color: var(--color-white);
     font-size: 2rem;
-    grid-column: 2 / -2;
-  }
-
-  p {
-    color: var(--main-text-color);
   }
 
   ul li {

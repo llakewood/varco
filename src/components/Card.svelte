@@ -1,13 +1,13 @@
 <script>
-  export let name, thumbnail, to, bumper;
+  export let title, slug, metadata;
 </script>
 
-<a href={to}>
+<a href={slug}>
   <figure>
-    <img src={thumbnail} alt={name} />
-    <figcaption>{name}</figcaption>
+    <img src={metadata.image.url} alt={title} />
+    <figcaption>{title}</figcaption>
   </figure>
-  {bumper} &rarr;
+  {metadata.bumper} &rarr;
 </a>
 
 <style>

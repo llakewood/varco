@@ -2,22 +2,22 @@
   https://svelte.dev/tutorial/each-block-bindings
  -->
 <script>
-  export let items, classes, nested;
+  export let items, classes, nested, pathRoot;
 </script>
 
 <ul class={classes}>
   {#each items as item, i}
     <li>
-      <a class={item.name.toLowerCase()} href={item.to}>
-        {item.name}
+      <a class={item.title.toLowerCase()} href={item.slug}>
+        {item.title}
       </a>
 
-      {#if item.children && nested}
+      {#if item.metadata.services && nested}
         <ul>
-          {#each item.children as child, i (child.id)}
+          {#each item.metadata.services as child, i (child.id)}
             <li>
-              <a class={item.name.toLowerCase()} href={child.to}>
-                {child.name}
+              <a class={item.title.toLowerCase()} href="{pathRoot}{child.slug}">
+                {child.title}
               </a>
             </li>
           {/each}
