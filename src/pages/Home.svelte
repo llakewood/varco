@@ -1,5 +1,6 @@
 <script>
   import YourVariables from "../components/YourVariables.svelte";
+  import HeroForm from "../components/forms/HeroForm.svelte";
   import CTA from "../components/CTA.svelte";
   import Thinking from "../components/Thinking.svelte";
   import Services from "../components/Services.svelte";
@@ -9,7 +10,7 @@
 
 <section class="hero">
   <YourVariables />
-  <CTA />
+  <HeroForm />
 </section>
 
 <section class="fill">

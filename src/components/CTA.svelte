@@ -1,66 +1,43 @@
 <script>
-  let name,
-    email,
-    phone = undefined;
-
-  const handleSubmit = () => {
-    console.log({ name });
-  };
+  import HeroForm from "./forms/HeroForm.svelte";
 </script>
 
 <div>
-  <h2>Free consultation</h2>
-  <form
-    on:submit={handleSubmit}
-    action="https://formspree.io/f/xgerrrgw?success"
-    method="POST"
-  >
-    <label
-      >Name
-      <input bind:value={name} required name="name" />
-    </label>
-
-    <label
-      >Email
-      <input bind:value={email} required email="email" />
-    </label>
-
-    <span>
-      {#if name}
-        Confirm: {name}
-      {/if}
-
-      {#if email}
-        , {email}
-      {/if}
-    </span>
-
-    <button>Get started</button>
-  </form>
+  <h2>Getting Curious?</h2>
+  <p>
+    If you're picking up what we're layin' down, it would be a pleasure to work
+    together.
+  </p>
+  <p>
+    Let's talk about how to take your projects, systems, and business from
+    yesterday into tomorrow.
+  </p>
+  <div><HeroForm /></div>
 </div>
 
 <style>
   div {
     display: grid;
-    border-top: 1px solid var(--main-light-accent);
     grid-gap: calc(var(--spacer) * 3);
-    border-radius: 0px;
+    padding: calc(var(--spacer) * 3);
+    border-radius: 8px;
+    border: 1px solid var(--color-yellow);
+    grid-column: 2 / -2;
+    grid-template-columns: repeat(12, 1fr);
   }
 
   h2,
-  button {
+  p {
+    display: grid;
     margin: 0;
+    grid-column: 2 / 9;
   }
 
-  span {
-    display: block;
+  div div {
+    grid-column: 9 / -2;
+    border: 0;
   }
 
   @media (min-width: 1024px) {
-    div {
-      padding: calc(var(--spacer) * 3);
-      border: 1px solid var(--color-accent);
-      border-radius: var(--spacer);
-    }
   }
 </style>
