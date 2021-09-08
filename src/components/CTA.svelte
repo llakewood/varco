@@ -5,8 +5,8 @@
 <div>
   <h2>Getting Curious?</h2>
   <p>
-    If you're picking up what we're layin' down, it would be a pleasure to work
-    together.
+    If you're picking up what we're layin' down, it would be a pleasure to
+    discuss how we can work together.
   </p>
   <p>
     Let's talk about how to take your projects, systems, and business from
