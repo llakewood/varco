@@ -18,7 +18,8 @@
   <p>
     Using proven approaches, a set of standardized tools and our advisors’ deep
     experience, we can provide you with vision and implementation options that
-    can help you continuously improve your products, services and processes.
+    can help you <strong>continuously improve</strong> your products, services and
+    processes.
   </p>
   <div>
     <Thinking />
@@ -65,6 +66,9 @@
     margin: 0 0 calc(var(--spacer) * 5) 0;
   }
 
+  strong {
+    color: var(--color-orange);
+  }
   section {
     grid-gap: var(--spacer);
     align-items: start;
