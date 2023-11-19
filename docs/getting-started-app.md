@@ -1,4 +1,4 @@
-# The Variables Company Svelt App Editing Guide
+# Editing The App
 
 ## TOC
 
