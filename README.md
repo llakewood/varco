@@ -5,7 +5,7 @@ This is web application is built in Svelte, a modern JavaScript framework. Docum
 ## TOC
 
 - [Getting Started with Svelte](./getting-started-svelte)
-- [Getting Started with this App](./getting-started-app)
+- [Editing this App](./getting-started-app)
 
 ## About the app
 
