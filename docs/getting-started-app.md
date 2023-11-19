@@ -2,14 +2,18 @@
 
 ## TOC
 
-- [Wiring](#wiring)
+- [Bootstrapping](#bootstrapping)
 - [Components](#components)
 
-## Wiring
+## Bootstrapping
 
 Svelte uses [`/src/App.svelte`](../src/App.svelte) as the main bootstrap file.
+Here you will:
 
-Here you will import scripts, set global styles, map routes, and set up your page container HTML and initial component layout.
+- Define import scripts
+- Set global styles
+- Describe map routes
+- Set up HTML page container HTML
 
 ## Components
 
