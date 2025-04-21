@@ -1,8 +1,13 @@
 <script>
+  /**
+   * Component: YourVariables
+   * Description: Hero object animating the core pillars of People, Process, UX, and Tech - the loop all aspects of an organization travel around. 
+  */
+
   import { onInterval } from "../utils.js";
 
   const variables = {
-    pillars: ["people", "process", "experience", "technology"],
+    pillars: ["Teams", "Process", "UX", "Tech"],
     traits: [
       "accessibility",
       "automation",
@@ -12,10 +17,10 @@
       "leadership",
       "mentorship",
       "monitoring",
-      "new ways of working",
+      "ways of working",
       "security",
       "strategy",
-      "to innovate",
+      "innovation",
     ],
   };
 
@@ -34,7 +39,7 @@
   let trait = randoVar(variables.traits);
 
   const grammar = () => {
-    needs = pillar == "people" ? "need" : "needs";
+    needs = pillar == "Teams" ? "need" : "needs";
   };
 
   const handleClick = () => {
@@ -51,17 +56,10 @@
 
 <div role="region" aria-live="polite">
   <h1>
-    Your <span class={pillar}>{pillar}</span>
+    <span class={pillar.toLowerCase()}>{pillar}</span>
     {needs}
     <span>{trait}</span>.
   </h1>
-  <div>
-    <p>
-      Better your business by aligning people, process, technology and
-      experience.
-      <a href="/thinking">See how &rarr;</a>
-    </p>
-  </div>
 </div>
 
 <style>
@@ -70,18 +68,6 @@
     margin: calc(var(--spacer) * 1);
     letter-spacing: -2px;
     line-height: 40px;
-  }
-
-  a {
-    display: block;
-    margin: calc(var(--spacer) * 2) 0;
-    font-size: 1.5rem;
-    border: 0;
-    max-width: 200px;
-  }
-
-  a:hover:after {
-    padding-left: calc(var(--spacer) * 2);
   }
 
   span:last-child {
