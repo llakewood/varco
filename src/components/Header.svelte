@@ -21,8 +21,8 @@
 
   h1 {
     color: var(--main-text-color);
-    font-size: 2rem;
-    font-weight: 100;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin: 0;
   }
 
@@ -30,10 +30,6 @@
     header {
       grid-template-columns: 3fr 6fr;
       padding: calc(var(--spacer) * 2) 0;
-    }
-    h1 {
-      font-size: 2.5rem;
-      line-height: 0.9em;
     }
   }
 </style>
