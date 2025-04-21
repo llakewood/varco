@@ -5,15 +5,8 @@
 
 {@html marked(value)}
 
-<textarea bind:value />
-
-<!--
-
-	In cases like these, where the names match, we can also use a shorthand form:
-
 <textarea bind:value></textarea>
 
--->
 <style>
   textarea {
     width: 100%;

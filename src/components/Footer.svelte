@@ -10,7 +10,7 @@
     <h2><a href="/">{@html title}</a></h2>
     <p>&copy; {year}, All rights reserved.</p>
   </div>
-  <div />
+  
   <div>
     <ul>
       <li><a href="/">Home</a></li>

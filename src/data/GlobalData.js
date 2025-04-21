@@ -1,16 +1,15 @@
 const GlobalProps = {
 	app: {
 		title: 'The Variables Co.',
-		description: 'Built with Svelte'
+		description: 'Because websites are more than just content on a page.'
 	},
 	navMain : [
-		{ id: 3, name: "Thinking", to: "/thinking" },
-		{ id: 1, name: "Services", to: "/services" },
-		{ id: 4, name: "Proof", to: "/proof" },
-		{ id: 5, name: "Contact", to: "/contact" },
+		{ id: 3, name: "Design Thinking", to: "/thinking" },
+		{ id: 1, name: "Tech Services", to: "/services" },
+		{ id: 4, name: "Proof of Work", to: "/proof" }
   ],
 	services : [
-		{ id: 3, name: "People", to: "/people", description:"Putting humans at the center of your strategy.", children: [
+		{ id: 3, name: "Teams", to: "/people", description:"Putting humans at the center of your strategy.", children: [
 			{ id: 1, name: "Career mentorship", to: "/services/career-mentorship", description:""  },
 			{ id: 2, name: "Fit-gap analysis", to: "/services/fit-gap", description:""},
 			{ id: 3, name: "Leadership alignment", to: "/services/leadership-alignment", description:""  },
@@ -22,13 +21,13 @@ const GlobalProps = {
 			{ id: 3, name: "Project management", to: "/services/work-management", description:""  },
 			{ id: 4, name: "Work management", to: "/services/work-management", description:""  },
 		]  },
-		{ id: 4, name: "Technology", to: "/technology", description:"Shift your investment from upkeep to innovation.", children: [
+		{ id: 4, name: "Tech", to: "/technology", description:"Shift your investment from upkeep to innovation.", children: [
 			{ id: 21, name: "DevSecOps", to: "/services/devsecops", description:"" },
 			{ id: 22, name: "Infrastructure", to: "/services/infrastructre", description:"" },
 			{ id: 23, name: "Modernization", to: "/services/infrastructre", description:"" },
 			{ id: 24, name: "Web & Application Development", to: "/services/development", description:"" },
 		]  },
-		{ id: 5, name: "Experience", to: "/experience", description:"Usability, usefulness, and desirability provided in your products and services.", children: [
+		{ id: 5, name: "UX", to: "/experience", description:"Usability, usefulness, and desirability provided in your products and services.", children: [
 			{ id: 1, name: "Accessibility", to: "/services/accessibility", description:"", },
 			{ id: 2, name: "Creative Technology", to: "/services/infrastructre", description:"" },
 			{ id: 3, name: "Design", to: "/services/user-experience", description:"" },

@@ -22,31 +22,31 @@
   import Groups from "../components/forms/Groups.svelte";
   import Range from "../components/forms/Range.svelte";
   import Select from "../components/forms/Select.svelte";
-  import Textarea from "../components/forms/Textarea.svelte";
+  // import Textarea from "../components/forms/Textarea.svelte";
 </script>
 
-<nav />
+<nav></nav>
 <main>
-  <Await />
-  <Button />
-  <Events />
-  <List />
-  <Login />
-  <Video />
-  <Gallery />
+  <Await></Await>
+  <Button></Button>
+  <Events></Events>
+  <List></List>
+  <Login></Login>
+  <Video></Video>
+  <Gallery></Gallery>
   <div>
-    <Card {...app} />
-    <Card {...app} />
-    <Card {...app} />
+    <Card {...app}></Card>
+    <Card {...app}></Card>
+    <Card {...app}></Card>
   </div>
   <form>
-    <Select />
-    <Input />
-    <InputField />
-    <Groups />
-    <Range />
-    <Checkbox />
-    <Textarea />
+    <Select></Select>
+    <Input></Input>
+    <InputField></InputField>
+    <Groups></Groups>
+    <Range></Range>
+    <Checkbox></Checkbox>
+    <!-- <Textarea></Textarea> -->
   </form>
 </main>
 

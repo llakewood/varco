@@ -1,4 +1,4 @@
-<div />
+<div id="infinity"></div>
 
 <style>
   div {

@@ -1,33 +1,41 @@
 <script>
   import YourVariables from "../components/YourVariables.svelte";
-  import HeroForm from "../components/forms/HeroForm.svelte";
   import CTA from "../components/CTA.svelte";
   import Thinking from "../components/Thinking.svelte";
   import Services from "../components/Services.svelte";
   import Proof from "../components/Proof.svelte";
-  // import Qbert from "../components/Qbert.svelte";
+  // import Particles from "../components/Particles.svelte"; 
 </script>
 
 <section class="hero">
-  <YourVariables />
-  <HeroForm />
-</section>
+    <!-- <Particles> -->
+      <h1>Because websites are <br>more than just content on a page.</h1>
+    <!-- </Particles>     -->
+</section> 
 
 <section class="fill">
-  <h2>Thinking</h2>
+  <h2>Design Thinking</h2>
+  <div><YourVariables /></div>
   <p>
-    Using proven approaches, a set of standardized tools and our advisors’ deep
-    experience, we can provide you with vision and implementation options that
-    can help you <strong>continuously improve</strong> your products, services and
+    Using proven approaches, standardized tools, and our advisors’ deep
+    experience, we'll help you define your vision and design solutions that
+    let you <strong>continuously improve</strong> your products, services and
     processes.
   </p>
   <div>
     <Thinking />
   </div>
+  <div>
+    <p>
+      Better your business by aligning people, process, technology and
+      experience.
+      <a href="/thinking">See how &rarr;</a>
+    </p>
+  </div>
 </section>
 
 <section>
-  <h2>Services</h2>
+  <h2>Tech Services</h2>
   <p>
     Our human-centered approach helps organizations modernize planning, research
     & development, delivery, monitoring and management of traditional and
@@ -39,7 +47,7 @@
 </section>
 
 <section class="fill">
-  <h2>Proof</h2>
+  <h2>Proof of Work</h2>
   <p>
     Learn about how these concepts are helping real organizations work better
     together to succeed in their mission and innovate for the future.
@@ -55,9 +63,7 @@
 
 <!-- Qbert /-->
 <style>
-  .hero {
-    grid-gap: calc(var(--spacer) * 5);
-  }
+
 
   h2 {
     margin: calc(var(--spacer) * 5) 0 0 0;
@@ -83,11 +89,24 @@
     background-color: var(--main-light-accent);
   }
 
+  .hero {
+    grid-gap: calc(var(--spacer) * 5);
+  }
+
+  a {
+    display: block;
+    margin: calc(var(--spacer) * 2) 0;
+    font-size: 1.5rem;
+    border: 0;
+    max-width: 200px;
+  }
+
+  a:hover:after {
+    padding-left: calc(var(--spacer) * 2);
+  }
+
+
   @media (min-width: 1024px) {
-    .hero {
-      grid-template-columns: 6fr 6fr;
-      grid-gap: calc(var(--spacer) * 4);
-    }
     h2 {
       margin: 0;
     }

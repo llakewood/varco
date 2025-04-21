@@ -75,7 +75,7 @@
   </video>
 
   <div class="controls" style="opacity: {duration && showControls ? 1 : 0}">
-    <progress value={time / duration || 0} />
+    <progress value={time / duration || 0} ></progress>
 
     <div class="info">
       <span class="time">{format(time)}</span>

@@ -54,13 +54,13 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
   :global(:root) {
     --color-white: rgb(239, 241, 253);
     --color-black: rgb(25, 25, 20);
-    --color-blue: #174fa0;
-    --color-red: #cb3831;
-    --color-green: #297443;
-    --color-purple: #5b0d5a;
-    --color-orange: #ff6013;
-    --color-yellow: #faab11;
-    --main-light-accent: #fde0a7;
+    --color-blue: #0081a7;
+    --color-red: #f07167;
+    --color-green: #00afb9;
+    --color-purple: #948098;
+    --color-orange: #f7a072;
+    --color-yellow: #fdfcdc;
+    --main-light-accent: #fed9b7;
     --main-bg-color: var(--main-light-accent);
     --main-text-color: var(--color-black);
     --main-shadow-color: var(--color-black);
@@ -120,22 +120,22 @@ https://kit.svelte.dev/docs#introduction-before-we-begin
     align-items: center;
   }
 
-  :global(.people) {
+  :global(.teams) {
     color: var(--color-blue);
   }
   :global(.process) {
     color: var(--color-purple);
   }
-  :global(.technology) {
+  :global(.tech) {
     color: var(--color-green);
   }
-  :global(.experience) {
+  :global(.ux) {
     color: var(--color-red);
   }
 
   @media (min-width: 640px) {
     :global(body) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     :global(section) {
       display: grid;
