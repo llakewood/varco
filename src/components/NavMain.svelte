@@ -21,6 +21,7 @@
 
   li {
     padding-bottom: var(--spacer);
+    font-weight: 300;
   }
 
   @media (min-width: 640px) {
